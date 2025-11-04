@@ -20,8 +20,6 @@
 
 ## 安装方法
 
-- 通过[ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager)安装（搜索`Qwen3`）
-
 - 下载或通过git克隆本仓库到`ComfyUI\custom_nodes\`目录，然后运行：
 
 ```python
