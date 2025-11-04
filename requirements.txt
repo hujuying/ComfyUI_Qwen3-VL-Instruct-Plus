@@ -1,0 +1,15 @@
+torch
+torchvision
+torchaudio
+numpy
+pillow
+huggingface_hub
+accelerate
+optimum
+av
+transformers>=4.57.1
+qwen-vl-utils
+opencv-python
+bitsandbytes
+triton-windows; sys_platform == 'win32'
+triton; sys_platform == 'linux'

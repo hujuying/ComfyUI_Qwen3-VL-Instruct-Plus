@@ -1,0 +1,14 @@
+[project]
+name = "Comfyui_Qwen3-VL-Instruct-Plus"
+description = "This is an implementation of [Qwen3-VL-Instruct](https://github.com/QwenLM/Qwen3-VL) by [ComfyUI](https://github.com/comfyanonymous/ComfyUI), which includes, but is not limited to, support for text-based queries, video queries, single-image queries, and multi-image queries to generate captions or responses."
+version = "1.0.0"
+license = { file = "LICENSE" }
+dependencies = ["torch", "torchvision", "numpy", "pillow", "huggingface_hub", "transformers", "bitsandbytes","accelerate","qwen-vl-utils","optimum","av", "opencv-python"]
+
+[project.urls]
+Repository = "https://github.com/IuvenisSapiens/Comfyui_Qwen3-VL-Instruct"
+
+[tool.comfy]
+PublisherId = "IuvenisSapiens"
+DisplayName = "Comfyui_Qwen3-VL-Instruct-Plus"
+Icon = "favicon.ico"
