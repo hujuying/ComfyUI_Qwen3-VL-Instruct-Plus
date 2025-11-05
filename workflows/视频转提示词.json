@@ -1,0 +1,258 @@
+{
+  "id": "9f2dfc63-3d19-433d-a7c0-49d83464f553",
+  "revision": 0,
+  "last_node_id": 64,
+  "last_link_id": 77,
+  "nodes": [
+    {
+      "id": 61,
+      "type": "MultiplePathsInputPlus",
+      "pos": [
+        65.67433419535155,
+        -281.0395005726622
+      ],
+      "size": [
+        338.779296875,
+        222
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "path_1",
+          "type": "PATH",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "paths",
+          "type": "PATH",
+          "links": [
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "hujuying/ComfyUI_Qwen3-VL-Instruct-Plus",
+        "ver": "49b2bcb5a4f651007f42372b5671f2006a13b8b2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.3"
+        }
+      },
+      "widgets_values": [
+        1,
+        1,
+        2,
+        true,
+        true,
+        1,
+        null
+      ]
+    },
+    {
+      "id": 62,
+      "type": "Qwen3_VQA_Plus",
+      "pos": [
+        435.67433419535155,
+        -281.0395005726622
+      ],
+      "size": [
+        400,
+        412
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_path",
+          "shape": 7,
+          "type": "PATH",
+          "link": 75
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            76
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "hujuying/ComfyUI_Qwen3-VL-Instruct-Plus",
+        "ver": "49b2bcb5a4f651007f42372b5671f2006a13b8b2",
+        "Node name for S&R": "Qwen3_VQA_Plus",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.3"
+        }
+      },
+      "widgets_values": [
+        "请描述视频的内容，字数限制在100字以内",
+        "",
+        "Qwen3-VL-4B-Instruct-FP8",
+        "none",
+        false,
+        0.7,
+        2048,
+        200704,
+        1003520,
+        1324,
+        "randomize",
+        "eager",
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 64,
+      "type": "VideoLoaderPlus",
+      "pos": [
+        -330,
+        -280
+      ],
+      "size": [
+        270,
+        275.40625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": null
+        },
+        {
+          "name": "PATH",
+          "type": "PATH",
+          "links": [
+            77
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "hujuying/ComfyUI_Qwen3-VL-Instruct-Plus",
+        "ver": "49b2bcb5a4f651007f42372b5671f2006a13b8b2",
+        "Node name for S&R": "VideoLoaderPlus",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.3"
+        }
+      },
+      "widgets_values": [
+        "AnimateDiff_00002.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "easy showAnything",
+      "pos": [
+        50,
+        0
+      ],
+      "size": [
+        350,
+        360
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "输入任何",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.3"
+        }
+      },
+      "widgets_values": [
+        "夕阳西下，橙红色天空中，一轮金阳缓缓沉落。一棵枯树剪影矗立，几只飞鸟掠过，画面宁静而壮美，充满自然的诗意与时光流逝的韵味。"
+      ]
+    }
+  ],
+  "links": [
+    [
+      75,
+      61,
+      0,
+      62,
+      0,
+      "PATH"
+    ],
+    [
+      76,
+      62,
+      0,
+      63,
+      0,
+      "*"
+    ],
+    [
+      77,
+      64,
+      1,
+      61,
+      0,
+      "PATH"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9646149645000006,
+      "offset": [
+        532.8903891388778,
+        491.48616320060853
+      ]
+    },
+    "frontendVersion": "1.28.6",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
